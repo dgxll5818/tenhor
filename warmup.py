@@ -8,11 +8,7 @@ SITEMAP_URL = "https://www.cukari.com/product-sitemap.xml"
 def get_urls():
    print(f"正在读取 Sitemap: {SITEMAP_URL}")
    try:
-     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,/;q=0.8',
-'Accept-Language': 'en-US,en;q=0.5',
-'Connection': 'keep-alive',
-'Upgrade-Insecure-Requests': '1'}
+     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Cache-Warmer/1.0'}
      r = requests.get(SITEMAP_URL, headers=headers, timeout=20)
      print("状态码:", r.status_code)
      print("Content-Type:", r.headers.get("Content-Type"))
