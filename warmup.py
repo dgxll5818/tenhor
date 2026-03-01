@@ -3,7 +3,7 @@ import time
 from xml.etree import ElementTree
 
 # 这里修改为你网站的 sitemap 地址
-SITEMAP_URL = ""
+SITEMAP_URL = "https://www.cukari.com/product-sitemap.xml"
 
 def get_urls():
 print(f"正在读取 Sitemap: {SITEMAP_URL}")
