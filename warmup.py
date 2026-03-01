@@ -14,6 +14,9 @@ def get_urls():
 'Connection': 'keep-alive',
 'Upgrade-Insecure-Requests': '1'}
      r = requests.get(SITEMAP_URL, headers=headers, timeout=20)
+     print("状态码:", r.status_code)
+     print("Content-Type:", r.headers.get("Content-Type"))
+     print("返回前300字符:\n", r.text[:300])
      root = ElementTree.fromstring(r.content)
 # 提取所有 <loc> 标签中的 URL
      namespace = {'ns': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
